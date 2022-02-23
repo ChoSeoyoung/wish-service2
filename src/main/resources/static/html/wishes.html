@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>하고싶은 일 목록</title>
+    <link href="../../css/bootstrap.min.css"
+          rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="py-5 text-center">
+        <h1>하고싶은 일 목록</h1>
+    </div>
+    <hr>
+    <form method="get">
+        <table class="table">
+            <thead>
+            <tr>
+                <th></th>
+                <th>번호</th>
+                <th>하고싶은 일</th>
+                <th>기간</th>
+                <th>경비(단위:만원)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><input name="rowCheck" type="checkbox"></td>
+                <td><a href="editWish">1</a></td>
+                <td><a href="editWish">테스트 목록1</a></td>
+                <td>2022.2.5~2022.2.6</td>
+                <td>5</td>
+            </tr>
+            </tbody>
+        </table>
+        <button onclick="location.href='./wishes/add'" type="button"
+                class="btn btn-primary">등록</button>
+        <button class="btn btn-danger" type="submit">삭제</button>
+    </form>
+</div>
+</body>
+</html>
