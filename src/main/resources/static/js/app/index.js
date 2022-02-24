@@ -18,7 +18,9 @@ var main = {
         var data = {
             title : $('#title').val(),
             period : $('#period').val(),
-            cost : $('#cost').val()
+            cost : $('#cost').val(),
+            regionType : $("input[name='regionType']:checked").val(),
+            travelType : $('#travelType').val()
         };
 
         $.ajax({
@@ -38,7 +40,9 @@ var main = {
         var data = {
             title: $('#title').val(),
             period: $('#period').val(),
-            cost: $('#cost').val()
+            cost: $('#cost').val(),
+            regionType : $("input[name='regionType']:checked").val(),
+            travelType : $('#travelType').val()
         };
 
         var id = $('#id').val();

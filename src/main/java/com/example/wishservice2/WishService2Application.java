@@ -11,5 +11,4 @@ public class WishService2Application {
 	public static void main(String[] args) {
 		SpringApplication.run(WishService2Application.class, args);
 	}
-
 }

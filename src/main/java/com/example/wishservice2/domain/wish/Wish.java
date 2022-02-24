@@ -23,20 +23,28 @@ public class Wish extends BaseTimeEntity {
 
     @Column(length=500, nullable=false)
     private Integer cost;
-    //private RegionType regionType; //여행 지역
-    //private String travelType; //여행 타입
+
+    @Column(nullable = false)
+    private RegionType regionType; //여행 지역
+
+    @Column(nullable = false)
+    private String travelType; //여행 타입
     //private Boolean open; //공개 여부
 
     @Builder
-    public Wish(String title, String period, Integer cost) {
+    public Wish(String title, String period, Integer cost, RegionType regionType, String travelType) {
         this.title = title;
         this.period = period;
         this.cost = cost;
+        this.regionType = regionType;
+        this.travelType = travelType;
     }
 
-    public void update(String title, String period, Integer cost){
+    public void update(String title, String period, Integer cost, RegionType regionType, String travelType){
         this.title = title;
         this.period = period;
         this.cost = cost;
+        this.regionType = regionType;
+        this.travelType = travelType;
     }
 }

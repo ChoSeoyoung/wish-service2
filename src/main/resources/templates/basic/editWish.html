@@ -31,6 +31,23 @@
             <label>경비(단위:만원)</label>
             <input type="text" class="form-control" id="cost" name="cost" th:value="${wish.cost}">
         </div>
+        <div class="form-group">
+            <div>지역</div>
+            <div th:each="type : ${regionTypes}" class="form-check form-check-inline">
+                <input type="radio" th:field="*{wish.regionType}" th:value="${type.name()}" class="form-check-input">
+                <label th:for="${#ids.prev('regionType')}" th:text="${type.description}" class="form-check-label">
+                    DOMESTIC
+                </label>
+            </div>
+        </div>
+        <div>
+            <div>함께하는 사람</div>
+            <select th:field="*{wish.travelType}" class="form-select">
+                <option value=""> ==  여행 방식 선택 == </option>
+                <option th:each="travelType : ${travelTypes}" th:value="${travelType.code}" th:text="${travelType.displayName}">ALONE</option>
+                </option>
+            </select>
+        </div>
         <br>
         <button type="button" class="btn btn-primary" id="btn-update">등록</button>
         <button class="btn btn-danger" type="button" id="btn-delete">삭제</button>

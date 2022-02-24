@@ -28,7 +28,7 @@ public class WishService {
         Wish wish = wishRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("해당 게시물이 없습니다. id="+id));
 
-        wish.update(requestDto.getTitle(),requestDto.getPeriod(),requestDto.getCost());
+        wish.update(requestDto.getTitle(),requestDto.getPeriod(),requestDto.getCost(), requestDto.getRegionType(), requestDto.getTravelType());
 
         return id;
     }
